@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Porto de Galinhas - Roteiro 2026</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="topo">
+      <img src="./assets/porto-hero.jpg" alt="Praia em Porto de Galinhas" />
+      <div class="heroShade"></div>
+      <nav class="topbar" aria-label="Navegacao rapida">
+        <a href="#voos">Voos</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#checklist">Checklist</a>
+        <a href="#mapa">Mapa</a>
+      </nav>
+      <section class="heroText">
+        <p class="eyebrow">30 jun - 10 jul 2026</p>
+        <h1>Porto de Galinhas</h1>
+        <p>Roteiro leve para 2 casais com criancas: praia boa, pausas reais, passeios certeiros e espaco para decidir pela mare.</p>
+      </section>
+    </header>
+
+    <main>
+      <section class="quickGrid" aria-label="Resumo da viagem">
+        <article class="metric countdownCard">
+          <span>Contagem regressiva</span>
+          <strong id="countdown">Calculando...</strong>
+          <small>ate o voo de ida</small>
+        </article>
+        <article class="metric">
+          <span>Base</span>
+          <strong>Porto de Galinhas</strong>
+          <small>Recife como chegada e retorno</small>
+        </article>
+        <article class="metric">
+          <span>Ritmo</span>
+          <strong>Familia + descanso</strong>
+          <small>dias cheios intercalados com dias leves</small>
+        </article>
+      </section>
+
+      <section class="section" id="voos">
+        <div class="sectionHead">
+          <p class="eyebrow">Informacoes</p>
+          <h2>Voos e carro</h2>
+        </div>
+        <div class="infoGrid">
+          <article class="card flight">
+            <div class="cardTop">
+              <span class="pill">Ida</span>
+              <strong>GOL 1614</strong>
+            </div>
+            <h3>CGH Sao Paulo -> REC Recife</h3>
+            <p>Terca, 30 de junho de 2026</p>
+            <dl>
+              <div><dt>Sai</dt><dd>11:50 - Congonhas</dd></div>
+              <div><dt>Chega</dt><dd>15:05 - Guararapes</dd></div>
+              <div><dt>Duracao</dt><dd>3h15</dd></div>
+            </dl>
+          </article>
+          <article class="card flight">
+            <div class="cardTop">
+              <span class="pill">Volta</span>
+              <strong>GOL 1587</strong>
+            </div>
+            <h3>REC Recife -> GRU Sao Paulo</h3>
+            <p>Sexta, 10 de julho de 2026</p>
+            <dl>
+              <div><dt>Sai</dt><dd>12:50 - Guararapes</dd></div>
+              <div><dt>Chega</dt><dd>16:05 - Guarulhos</dd></div>
+              <div><dt>Bagagem</dt><dd>mochila + mala de mao</dd></div>
+            </dl>
+          </article>
+          <article class="card car">
+            <div class="cardTop">
+              <span class="pill">Carro</span>
+              <strong>Voucher 9282895</strong>
+            </div>
+            <h3>Chevrolet Spin ou similar</h3>
+            <p>Rota do Sol Rent a Car - Aeroporto de Recife</p>
+            <dl>
+              <div><dt>Retirada</dt><dd>30/06, 16:00</dd></div>
+              <div><dt>Devolucao</dt><dd>10/07, 16:00</dd></div>
+              <div><dt>Detalhe</dt><dd>7 lugares, automatico, ar, km livre</dd></div>
+            </dl>
+          </article>
+          <article class="card alertCard">
+            <div class="cardTop">
+              <span class="pill">Atencao</span>
+              <strong>Ajustar devolucao</strong>
+            </div>
+            <h3>Carro x voo de volta</h3>
+            <p>O voucher do carro marca devolucao em 10/07 as 16:00, mas o voo REC -> GRU sai as 12:50. Confirmar com a locadora a devolucao antecipada no aeroporto.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section weatherSection" id="tempo">
+        <div class="sectionHead">
+          <p class="eyebrow">Ceu e mare</p>
+          <h2>Previsao do tempo</h2>
+        </div>
+        <div class="weatherShell">
+          <div>
+            <p class="lead">A previsao abaixo vem online da Open-Meteo para Porto de Galinhas. Se o celular estiver sem internet ou a API falhar, a pagina mostra um plano B gravado para nao ficar vazia.</p>
+            <a class="textLink" href="https://www.google.com/search?q=tabua+das+mares+porto+de+galinhas+30+junho+2026" target="_blank" rel="noreferrer">Checar tabua das mares</a>
+          </div>
+          <div class="weatherList" id="weatherList" aria-live="polite">
+            <article class="weatherItem"><strong>Carregando</strong><span>previsao online</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="agenda">
+        <div class="sectionHead">
+          <p class="eyebrow">Roteiro equilibrado</p>
+          <h2>Agenda de 10 dias</h2>
+        </div>
+        <div class="dayRail" id="dayRail"></div>
+      </section>
+
+      <section class="section split" id="planejamento">
+        <div>
+          <div class="sectionHead">
+            <p class="eyebrow">Planejamento</p>
+            <h2>Reservas e decisoes</h2>
+          </div>
+          <div class="todoColumns">
+            <article class="card compact">
+              <h3>Reservar antes</h3>
+              <ul>
+                <li>Jangada das piscinas naturais no dia de melhor mare baixa.</li>
+                <li>Buggy ponta a ponta, idealmente a tarde para pegar por do sol.</li>
+                <li>Carneiros com base/catamara se o grupo quiser estrutura.</li>
+                <li>Maragogi apenas se todos toparem o deslocamento mais longo.</li>
+              </ul>
+            </article>
+            <article class="card compact">
+              <h3>Decidir na vespera</h3>
+              <ul>
+                <li>Piscinas naturais e Muro Alto dependem muito da mare.</li>
+                <li>Recife/Olinda pode migrar para dia nublado.</li>
+                <li>Dia livre deve continuar livre, sem culpa.</li>
+                <li>Restaurantes da vila: escolher pelo humor das criancas.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+        <aside class="card bag">
+          <h3>Bagagem sugerida</h3>
+          <div class="tagCloud">
+            <span>protetor solar</span><span>repelente</span><span>camiseta UV</span><span>bone</span><span>oculos</span><span>chinelo</span><span>papete</span><span>roupa leve</span><span>mala de mao</span><span>farmacinha</span><span>saco estanque</span><span>carregador</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section" id="checklist">
+        <div class="sectionHead">
+          <p class="eyebrow">Para nao esquecer</p>
+          <h2>Checklist compartilhavel</h2>
+        </div>
+        <p class="sectionNote">Pode clicar sem medo: os marcados ficam salvos neste aparelho e neste navegador.</p>
+        <div class="checkGrid" id="checkGrid"></div>
+        <p class="saveStatus" id="saveStatus" aria-live="polite">Status: pronto para marcar.</p>
+      </section>
+
+      <section class="section" id="mapa">
+        <div class="sectionHead">
+          <p class="eyebrow">Mapa</p>
+          <h2>Base e passeios</h2>
+        </div>
+        <div class="mapWrap">
+          <iframe title="Mapa de Porto de Galinhas" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-35.120%2C-8.665%2C-34.930%2C-8.430&layer=mapnik&marker=-8.5069%2C-35.0050"></iframe>
+        </div>
+        <div class="placeGrid">
+          <a href="https://www.google.com/maps/search/Porto+de+Galinhas" target="_blank" rel="noreferrer">Porto de Galinhas</a>
+          <a href="https://www.google.com/maps/search/Praia+de+Muro+Alto" target="_blank" rel="noreferrer">Muro Alto</a>
+          <a href="https://www.google.com/maps/search/Pontal+de+Maracaipe" target="_blank" rel="noreferrer">Pontal de Maracaipe</a>
+          <a href="https://www.google.com/maps/search/Praia+dos+Carneiros" target="_blank" rel="noreferrer">Carneiros</a>
+          <a href="https://www.google.com/maps/search/Marco+Zero+Recife" target="_blank" rel="noreferrer">Recife Antigo</a>
+        </div>
+      </section>
+
+      <section class="section photos" id="fotos">
+        <div class="sectionHead">
+          <p class="eyebrow">So para dar vontade</p>
+          <h2>Fotos</h2>
+        </div>
+        <div class="photoGrid">
+          <figure><img src="./assets/porto-hero.jpg" alt="Praia de Porto de Galinhas" /><figcaption>Porto de Galinhas</figcaption></figure>
+          <figure class="tall"><img src="./assets/porto-piscinas.jpg" alt="Piscinas naturais de Porto de Galinhas" /><figcaption>Piscinas naturais</figcaption></figure>
+          <figure><img src="./assets/muro-alto.jpg" alt="Praia de Muro Alto" /><figcaption>Muro Alto</figcaption></figure>
+          <figure><img src="./assets/carneiros.jpg" alt="Praia dos Carneiros" /><figcaption>Carneiros</figcaption></figure>
+          <figure class="poster alt"><span>Pontal de Maracaipe</span><small>por do sol sem pressa</small></figure>
+          <figure class="poster city"><span>Recife + Olinda</span><small>dia de cultura e cor</small></figure>
+        </div>
+      </section>
+
+      <section class="section playlist" id="playlist">
+        <div class="sectionHead">
+          <p class="eyebrow">Trilha da viagem</p>
+          <h2>Playlist para animar</h2>
+        </div>
+        <div class="playlistHero">
+          <div>
+            <h3>Modo gratis</h3>
+            <p>Os botoes abrem buscas prontas no YouTube Music. Nao cria uma playlist na sua conta, mas ja deixa a fila da viagem a dois toques de distancia.</p>
+          </div>
+          <a class="primaryAction" href="https://music.youtube.com/search?q=playlist+verao+brasil+porto+de+galinhas" target="_blank" rel="noreferrer">Abrir mix no YouTube Music</a>
+        </div>
+        <div class="songGrid">
+          <a href="https://music.youtube.com/search?q=Anunciacao+Alceu+Valenca" target="_blank" rel="noreferrer"><strong>Anunciacao</strong><span>Alceu Valenca</span></a>
+          <a href="https://music.youtube.com/search?q=La+Belle+de+Jour+Alceu+Valenca" target="_blank" rel="noreferrer"><strong>La Belle de Jour</strong><span>Alceu Valenca</span></a>
+          <a href="https://music.youtube.com/search?q=Deixa+Acontecer+Grupo+Revelacao" target="_blank" rel="noreferrer"><strong>Deixa Acontecer</strong><span>Grupo Revelacao</span></a>
+          <a href="https://music.youtube.com/search?q=Pais+Tropical+Jorge+Ben+Jor" target="_blank" rel="noreferrer"><strong>Pais Tropical</strong><span>Jorge Ben Jor</span></a>
+          <a href="https://music.youtube.com/search?q=Onda+do+Amor+Ludmilla" target="_blank" rel="noreferrer"><strong>Onda do Amor</strong><span>Ludmilla</span></a>
+          <a href="https://music.youtube.com/search?q=Varias+Queixas+Gilsons" target="_blank" rel="noreferrer"><strong>Varias Queixas</strong><span>Gilsons</span></a>
+          <a href="https://music.youtube.com/search?q=Tempos+Modernos+Lulu+Santos" target="_blank" rel="noreferrer"><strong>Tempos Modernos</strong><span>Lulu Santos</span></a>
+          <a href="https://music.youtube.com/search?q=Meu+Abrigo+Melim" target="_blank" rel="noreferrer"><strong>Meu Abrigo</strong><span>Melim</span></a>
+        </div>
+      </section>
+    </main>
+
+    <a class="floatTop" href="#topo" aria-label="Voltar ao topo">↑</a>
+    <script src="./script.js"></script>
+  </body>
+</html>
